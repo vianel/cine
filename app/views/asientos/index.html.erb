@@ -1,0 +1,27 @@
+<h1>Listing asientos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Posicion</th>
+      <th>Sala</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @asientos.each do |asiento| %>
+      <tr>
+        <td><%= asiento.posicion %></td>
+        <td><%= asiento.sala %></td>
+        <td><%= link_to 'Show', asiento %></td>
+        <td><%= link_to 'Edit', edit_asiento_path(asiento) %></td>
+        <td><%= link_to 'Destroy', asiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Asiento', new_asiento_path %>

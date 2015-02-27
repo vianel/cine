@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Posicion:</strong>
+  <%= @asiento.posicion %>
+</p>
+
+<p>
+  <strong>Sala:</strong>
+  <%= @asiento.sala %>
+</p>
+
+<%= link_to 'Edit', edit_asiento_path(@asiento) %> |
+<%= link_to 'Back', asientos_path %>
